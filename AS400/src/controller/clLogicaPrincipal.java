@@ -7,6 +7,7 @@ public class clLogicaPrincipal {
     private clServers objServers;
     private clSelect objSelect;
     private clInsert objInsert;
+    private int insLimit;
 
     public clLogicaPrincipal() {
         this.teclado = new Scanner(System.in);
@@ -15,10 +16,16 @@ public class clLogicaPrincipal {
         System.out.println("**Autor: German A. Montañez H.**");
     }
 
+    public void mtdRegistrosPorInsert(){
+        System.out.println("------------------------------------------------------------------------------");
+        System.out.println("Ingrese la cantidad de registros que desea insertar al tiempo en cada INSERT:");
+        this.insLimit = teclado.nextInt();
+    }
+
     public void mtdRealizarSelect() {
         try {
             System.out.println("DATA SELECT...");
-            this.objSelect = new clSelect(this.objServers.serverOrigen, this.objServers.userOrigen, this.objServers.passwordOrigen, 10);
+            this.objSelect = new clSelect(this.objServers.serverOrigen, this.objServers.userOrigen, this.objServers.passwordOrigen, this.insLimit);
             System.out.println("Total de registros:" + this.objSelect.totRows);
             System.out.println("Total de columnas:" + this.objSelect.totColumns);
         } catch (Exception e) {
@@ -40,17 +47,12 @@ public class clLogicaPrincipal {
     }
 
     public int mtdMenuOpciones() {
-        try {
-            System.out.println("**********************");
-            System.out.println("1-Continuar");
-            System.out.println("2-Cambiar servidores");
-            System.out.println("3-Finalizar");
-            System.out.println("**********************");
-            System.out.println("op:");
-        } catch (Exception e) {
-            System.out.println("Error en opcion ingresada...");
-            mtdMenuOpciones();
-        }
+        System.out.println("**********************");
+        System.out.println("1-Continuar");
+        System.out.println("2-Cambiar servidores");
+        System.out.println("3-Finalizar");
+        System.out.println("**********************");
+        System.out.println("op:");
         return teclado.nextInt();
     }
 }
