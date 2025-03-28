@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AS400">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/AS400/out/artifacts/AS400_jar/AS400.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
