@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AS400-JAVA:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AS400_JAVA_jar</output-path>
+    <root id="archive" name="AS400-JAVA.jar">
+      <element id="module-output" name="AS400-JAVA" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/jt400.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/AS400/out/artifacts/AS400_jar/AS400.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
