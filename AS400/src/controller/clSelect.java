@@ -27,6 +27,9 @@ public class clSelect {
         System.out.println("Ingrese consulta a realizar:");
         String sql = teclado.nextLine();
 
+        System.out.println("Indique la cantidad de registros a insertar:");
+        this.totRows = teclado.nextInt();
+
         try {
 
             co= clConexion.conectar(server,user,password);
@@ -37,12 +40,12 @@ public class clSelect {
 
             this.totColumns = rsmd.getColumnCount();
 
-            this.totRows = 0;
+            /*this.totRows = 0;
             while (rs.next()) {
                 this.totRows++;
             }
 
-            rs=stm.executeQuery(sql);
+            rs=stm.executeQuery(sql);*/
 
             int countRows = 0;
             int countValues = 0;
