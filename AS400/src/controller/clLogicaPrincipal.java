@@ -8,7 +8,7 @@ public class clLogicaPrincipal {
     private clSelect objSelect;
     private clInsert objInsert;
     private int insLimit;
-//prueba 
+
     public clLogicaPrincipal() {
         this.teclado = new Scanner(System.in);
         this.objServers = new clServers();
